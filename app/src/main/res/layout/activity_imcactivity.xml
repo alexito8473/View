@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_IMC"
+    tools:context=".PrimerAplicacion.IMCActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIMCIsHombre"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/butNoActividado"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvIMCRangoPeso"
+        app:layout_constraintEnd_toStartOf="@+id/butIMCIsMujer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_varon"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:text="@string/hombre"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIMCIsMujer"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/butNoActividado"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvIMCRangoPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butIMCIsHombre"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_hembra"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:text="@string/mujer"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvIMCRangoPeso"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/butNoActividado"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvIMCPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butIMCIsHombre"
+        app:layout_constraintVertical_bias="0.496">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="@string/altura"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textIMCmostrarAltura"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/altura_minimo"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/medida"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/sliderIMCrangoAltura"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:contentDescription="@string/altura_maximo"
+                android:stepSize="1"
+                android:valueFrom="@string/altura_minimo"
+                android:valueTo="@string/altura_maximo" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvIMCPeso"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/butNoActividado"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/butIMCcalcular"
+        app:layout_constraintEnd_toStartOf="@+id/cvIMCEdad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvIMCRangoPeso">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/peso"
+                android:textAlignment="center"
+                android:textColor="@color/texto_poco_visible"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/textIMCverPeso"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/peso_incial"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="35sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/butIMCPesoMenos"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/butSumaRecta"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/butIMCPesoMas"
+                    app:layout_constraintTop_toTopOf="parent" >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_recta"
+                        android:tint="@color/white"
+                        tools:ignore="UseAppTint" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/butIMCPesoMas"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/butSumaRecta"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/butIMCPesoMenos"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/ic_suma"
+                        android:tint="@color/white"
+                        tools:ignore="UseAppTint" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvIMCEdad"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/butNoActividado"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/butIMCcalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cvIMCPeso"
+        app:layout_constraintTop_toBottomOf="@+id/cvIMCRangoPeso">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/edad"
+                android:textColor="@color/texto_poco_visible"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/textIMCverEdad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/edad_incial"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="35sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/butIMCEdadMenos"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/butSumaRecta"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/butIMCEdadMas"
+                app:layout_constraintTop_toTopOf="parent" >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_recta"
+                    android:tint="@color/white"
+                    tools:ignore="UseAppTint" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/butIMCEdadMas"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/butSumaRecta"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/butIMCEdadMenos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_suma"
+                    android:tint="@color/white"
+                    tools:ignore="UseAppTint" />
+            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butIMCcalcular"
+        android:background="@color/butSumaRecta"
+        android:text="Calcular"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvIMCPeso" />
+</androidx.constraintlayout.widget.ConstraintLayout>

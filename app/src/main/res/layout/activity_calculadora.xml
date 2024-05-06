@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrimerAplicacion.CalculadoraActivity"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#1A1A1A"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/butCalculadoraN0"
+        app:layout_constraintEnd_toStartOf="@+id/butCalculadoraN3"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN1"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraN5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#1A1A1A"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/butCalculadoraN0"
+        app:layout_constraintEnd_toStartOf="@+id/butCalculadoraN2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraN4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintBottom_toTopOf="@id/butCalculadoraN0"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraSuma"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN2"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraN6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraSuma"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:background="#323232"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraRersutlado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN3"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraResta" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraN7"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN1"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraN5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraN6"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN2"
+        app:layout_constraintStart_toEndOf="@id/butCalculadoraN4"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraN8"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="6"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraResta"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN3"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN5"
+       app:layout_constraintTop_toBottomOf="@id/butCalculadoraN9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraResta"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="-"
+        android:background="#323232"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraSuma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraMultiplicacion"
+        app:layout_constraintStart_toEndOf="@id/butCalculadoraN6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN0"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraBorradoGeneral"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraN1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraBorradoGeneral"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#1A1A1A"
+        android:text="C"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/butCalculadoraRersutlado"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN0"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraN2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraRersutlado"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="#ff661a"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/butCalculadoraBorradoGeneral"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraSuma" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN7"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="7"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN4"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraN8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraBorrar"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="8"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN5"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraN9"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN7"
+        app:layout_constraintTop_toBottomOf="@+id/butCalculadoraFactorial"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraN9"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="9"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="#1A1A1A"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN6"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN8"
+        app:layout_constraintEnd_toStartOf="@id/butCalculadoraMultiplicacion"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraFibonacci"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraMultiplicacion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="x"
+        android:background="#323232"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraResta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraN9"
+        app:layout_constraintTop_toBottomOf="@id/butCalculadoraDivision"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraDivision"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="/"
+        android:background="#323232"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraMultiplicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraFibonacci"
+        app:layout_constraintTop_toBottomOf="@+id/textCalculadoraResultado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraFibonacci"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="Fibo"
+        android:background="#323232"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN9"
+        app:layout_constraintEnd_toStartOf="@+id/butCalculadoraDivision"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraFactorial"
+        app:layout_constraintTop_toBottomOf="@+id/textCalculadoraResultado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraFactorial"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="Fact"
+        android:background="#323232"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN8"
+        app:layout_constraintEnd_toStartOf="@+id/butCalculadoraFibonacci"
+        app:layout_constraintStart_toEndOf="@+id/butCalculadoraBorrar"
+        app:layout_constraintTop_toBottomOf="@+id/textCalculadoraResultado"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butCalculadoraBorrar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="Borrar"
+        android:textSize="9sp"
+        android:background="#323232"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/butCalculadoraN7"
+        app:layout_constraintEnd_toStartOf="@+id/butCalculadoraFactorial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCalculadoraResultado"/>
+
+    <TextView
+        android:id="@+id/textCalculadoraResultado"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28"/>
+
+    <TextView
+        android:id="@+id/textCalculadoraAdvertencia"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/textNombreCreador"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="Alejandro Aguilar Alba"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

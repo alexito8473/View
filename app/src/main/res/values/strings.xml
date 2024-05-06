@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EjercicioClasesVista</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="altura">Altura</string>
+    <string name="medida">cm</string>
+    <string name="peso">Peso</string>
+    <string name="edad">Edad</string>
+    <string name="altura_minimo">120</string>
+    <string name="altura_maximo">220</string>
+    <string name="peso_minimo">0</string>
+    <string name="peso_maximo">220</string>
+    <string name="peso_incial">60</string>
+    <string name="edad_incial">22</string>
+    <string name="edad_minima">0</string>
+    <string name="edad_maxima">120</string>
+
+    <string-array name="valores_paises">
+        <item> Afghanistan </item>
+        <item> Albania </item>
+        <item> Argelia </item>
+        <item> Alemania </item>
+        <item> Andorra </item>
+        <item> Angola </item>
+        <item> España </item>
+    </string-array>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrimerAplicacion.MainActivity"
+    android:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIrSolution"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#FDC008"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/butIrSolutionV2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butIrBotones">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Ejercicio Solución"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIrSolutionV2"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#FDC008"
+        app:layout_constraintBottom_toTopOf="@+id/butIrCalculadora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butIrSolution"
+        app:cardCornerRadius="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Ejercicio SoluciónV2"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIrBotones"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#FDC008"
+        app:layout_constraintBottom_toTopOf="@+id/butIrSolution"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Ejercicio Botones"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIrCalculadora"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#FDC008"
+        app:layout_constraintBottom_toTopOf="@+id/butIrIMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butIrSolutionV2"
+        app:cardCornerRadius="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Ejercicio Calculadora"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/butIrIMC"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#FDC008"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butIrCalculadora"
+        app:cardCornerRadius="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Ejercicio IMC"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
